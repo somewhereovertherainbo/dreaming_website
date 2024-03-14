@@ -1,0 +1,16 @@
+<div class = 'border-bottom mb-2 row'>
+  <div class = 'col-9'>
+    <h4 style='color:coral'> {{dream['title']}} </h4>
+    {% if 'landscape' in dream %}
+    <p><b><i>Landscape:</i></b>  {{dream['landscape']}} </p>
+    {% endif %}
+    {% if 'Time of day' in dream %}
+    <p><b><i>Time of day:</i></b> {{dream['Time of day']}}</p>
+    {% endif %}
+    <p><b><i>Description:</i></b> {{dream['description']}}</p>
+  </div>
+  <div class = 'col-3 pt-4'>
+    <button type="button" class="btn btn-outline-danger">Visualize Dream</button>
+  </div>
+  
+</div>

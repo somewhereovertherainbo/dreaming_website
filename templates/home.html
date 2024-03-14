@@ -6,18 +6,22 @@
     <title>Life at Waterfalls</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body class='text-center bg-black' style='color: floralwhite'>
+<body class='bg-black' style='color: floralwhite'>
     <div class='container'>
-    <h1 class = 'mt-2 mb-4' style='font-size:80px'>BREATHE</h1>
+    <h1 class = 'text-center mt-2 mb-4' style='font-size:80px'>BREATHE</h1>
     <img class='img-fluid' id='banner3' src="static/banner3.jpg" >
-    <h1  class = 'mt-2 mb-4'>DREAM</h1>
-    <p class = 'lead'>
+    <h1  class = 'text-center mt-2 mb-4'>DREAM</h1>
+    <p class = 'text-center lead'>
         Imagine that your phyisical body is in perfect health condition, your mind is feeling light like your breath. You have no responsibiities, you are not dying today. Now, close your eyes and go near a waterfall in your imagination.
     </p>
-    <h3>My Dreams</h3>
-    <p>Add a list of three dreams</p>
+    <h3 class = 'text-center'>My Dreams</h3>
     <div>
-        <button class='btn btn-primary mt-2 mb-4'>Tell me your dream</button>
+      {% for dream in dreams %}
+        {% include 'list of dreams.html' %}
+      {% endfor %}
+    </div>
+    <div class = 'text-center'>
+        <button class='btn btn-primary mt-2 mb-4'>Visualize your dream</button>
       <p> Copyright 2024, Life at Waterfalls </p>
     </div>
 
